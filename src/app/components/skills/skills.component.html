@@ -1,0 +1,43 @@
+<section
+  id="skills"
+  data-aos="fade-up"
+  class="relative py-20 px-6 sm:px-10 lg:px-24 bg-gray-100 dark:bg-gray-900 overflow-hidden"
+>
+  <!-- Decorative Accent -->
+  <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto pl-6 sm:pl-10">
+    <h2
+      class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-8 text-gray-900 dark:text-white"
+    >
+      Skills Overview
+    </h2>
+
+    <!-- Divider -->
+    <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mb-8 rounded-full"></div>
+
+    <div class="grid gap-10 sm:grid-cols-2">
+      <!-- Technical Skills Chart -->
+      <div class="p-8 bg-white dark:bg-black rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
+        <h3 class="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
+          Technical Skills
+        </h3>
+        <canvas baseChart
+          [data]="techData"
+          [type]="'bar'">
+        </canvas>
+      </div>
+
+      <!-- Soft Skills Chart -->
+      <div class="p-8 bg-white dark:bg-black rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300">
+        <h3 class="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
+          Soft Skills
+        </h3>
+        <canvas baseChart
+          [data]="softData"
+          [type]="'bar'">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.dark {
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+body.light {
+  background: #ffffff;
+  color: #111111;
+}
+
+.section {
+  padding-top: 88px;
+}
+
+html {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.dark {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+

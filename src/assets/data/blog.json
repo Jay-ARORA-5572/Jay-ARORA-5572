@@ -1,0 +1,17 @@
+[
+  {
+    "title": "How I Built My Portfolio with Angular 21",
+    "date": "2025-01-10",
+    "content": "A full breakdown of hero, skills, animations, and performance tuning."
+  },
+  {
+    "title": "Mastering Authentication with Express + Angular",
+    "date": "2025-01-05",
+    "content": "JWT, guards, interceptors, and secure routes."
+  },
+  {
+    "title": "My Journey into AI Engineering",
+    "date": "2024-12-20",
+    "content": "Roadmap, projects, learning strategy and tools."
+  }
+]

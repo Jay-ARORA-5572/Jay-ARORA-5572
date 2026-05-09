@@ -1,0 +1,211 @@
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ccc;
+  border-top-color: #111;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.4s ease-out;
+}
+
+/* Preloader fade-out */
+.preloader {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Slow bounce animation for logo */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 1.2s infinite;
+}
+
+/* Smooth pulse for loading text */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.animate-pulse {
+  animation: pulse 1.5s infinite;
+}
+
+/* ── Preloader shell ── */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader {
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.4s ease-out;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* ── Loader wrapper — fluid & centered ── */
+.loader-wrapper {
+  position: relative;
+  width: clamp(80px, 15vw, 120px);
+  height: clamp(80px, 15vw, 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Orbiting rings ── */
+.orbit {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+}
+
+.orbit-1 {
+  border-top-color: #6366f1;
+  border-right-color: #6366f1;
+  animation: spin 1.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.orbit-2 {
+  inset: 14%;
+  border-bottom-color: #ec4899;
+  border-left-color: #ec4899;
+  animation: spin-reverse 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.orbit-3 {
+  inset: 28%;
+  border-top-color: #06b6d4;
+  border-right-color: #06b6d4;
+  animation: spin 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* ── Orbiting dots ── */
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot-1 {
+  width: clamp(6px, 1.2vw, 9px);
+  height: clamp(6px, 1.2vw, 9px);
+  background: #6366f1;
+  box-shadow: 0 0 8px 2px rgba(99, 102, 241, 0.6);
+  margin-top: -4px;
+}
+
+.dot-2 {
+  width: clamp(5px, 1vw, 8px);
+  height: clamp(5px, 1vw, 8px);
+  background: #ec4899;
+  box-shadow: 0 0 8px 2px rgba(236, 72, 153, 0.6);
+  margin-top: -3px;
+}
+
+.dot-3 {
+  width: clamp(4px, 0.8vw, 6px);
+  height: clamp(4px, 0.8vw, 6px);
+  background: #06b6d4;
+  box-shadow: 0 0 8px 2px rgba(6, 182, 212, 0.6);
+  margin-top: -3px;
+}
+
+/* ── Glowing core ── */
+.core {
+  width: clamp(10px, 2vw, 16px);
+  height: clamp(10px, 2vw, 16px);
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 30%, #6366f1 100%);
+  box-shadow:
+    0 0 10px 3px rgba(99, 102, 241, 0.5),
+    0 0 24px 6px rgba(99, 102, 241, 0.2);
+  animation: pulse-core 2s ease-in-out infinite;
+}
+
+/* ── Dark mode overrides ── */
+@media (prefers-color-scheme: dark) {
+  #preloader {
+    background: #000000;
+  }
+
+  .core {
+    background: radial-gradient(circle, #1e1b4b 30%, #6366f1 100%);
+  }
+}
+
+/* ── Keyframes ── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  to { transform: rotate(-360deg); }
+}
+
+@keyframes pulse-core {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(1.3); opacity: 0.75; }
+}
+
+/* ── Loading text pulse ── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.animate-pulse {
+  animation: pulse 1.8s ease-in-out infinite;
+}

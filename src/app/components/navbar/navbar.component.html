@@ -1,0 +1,72 @@
+<nav
+  class="navbar fixed w-full top-0 left-0 z-50 bg-white/70 dark:bg-black/50 backdrop-blur-md shadow-md transition-transform duration-300"
+  [class.-translate-y-full]="hidden"
+>
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 sm:px-10 py-4">
+    <!-- Logo -->
+    <!-- <div class="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+      Jay
+    </div> -->
+
+    <div class="flex items-center gap-2">
+  <img src="assets/logo.png" alt="JA Logo" class="nav-logo" />
+</div>
+
+    <!-- Menu -->
+    <ul class="hidden md:flex gap-6 text-lg font-medium text-gray-700 dark:text-gray-300">
+      <li>
+        <a href="#hero" [class.active]="active === 'hero'" class="hover:text-indigo-500 transition-colors duration-300">Home</a>
+      </li>
+      <li>
+        <a href="#about" [class.active]="active === 'about'" class="hover:text-indigo-500 transition-colors duration-300">About</a>
+      </li>
+      <li>
+        <a href="#services" [class.active]="active === 'services'" class="hover:text-indigo-500 transition-colors duration-300">Services</a>
+      </li>
+      <li>
+        <a href="#experience" [class.active]="active === 'experience'" class="hover:text-indigo-500 transition-colors duration-300">Experience</a>
+      </li>
+      <li>
+        <a href="#skills" [class.active]="active === 'skills'" class="hover:text-indigo-500 transition-colors duration-300">Skills</a>
+      </li>
+      <li>
+        <a href="#education" [class.active]="active === 'education'" class="hover:text-indigo-500 transition-colors duration-300">Education</a>
+      </li>
+      <li>
+        <a href="#projects" [class.active]="active === 'projects'" class="hover:text-indigo-500 transition-colors duration-300">Projects</a>
+      </li>
+      <li>
+        <a href="#contact" [class.active]="active === 'contact'" class="hover:text-indigo-500 transition-colors duration-300">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Mobile menu toggle -->
+    <div class="md:hidden flex items-center">
+      <button (click)="toggleMobileMenu()" class="text-gray-900 dark:text-white focus:outline-none">
+        <!-- Simple Hamburger Icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    class="mobileMenu md:hidden absolute top-full left-0 w-full bg-white dark:bg-black/90 shadow-md transition-all duration-300"
+    [class.hidden]="!mobileMenuOpen"
+  >
+    <ul class="flex flex-col gap-4 p-6 text-gray-900 dark:text-white text-lg font-medium">
+      <li><a href="#hero" [class.active]="active === 'hero'" (click)="toggleMobileMenu()">Home</a></li>
+      <li><a href="#about" [class.active]="active === 'about'" (click)="toggleMobileMenu()">About</a></li>
+      <li><a href="#services" [class.active]="active === 'services'" (click)="toggleMobileMenu()">Services</a></li>
+      <li><a href="#skills" [class.active]="active === 'skills'" (click)="toggleMobileMenu()">Skills</a></li>
+      <li><a href="#experience" [class.active]="active === 'experience'" (click)="toggleMobileMenu()">Experience</a></li>
+      <li><a href="#projects" [class.active]="active === 'projects'" (click)="toggleMobileMenu()">Projects</a></li>
+      <li><a href="#blog" [class.active]="active === 'blog'" (click)="toggleMobileMenu()">Blog</a></li>
+      <li><a href="#education" [class.active]="active === 'education'" (click)="toggleMobileMenu()">Education</a></li>
+      <li><a href="#contact" [class.active]="active === 'contact'" (click)="toggleMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>
