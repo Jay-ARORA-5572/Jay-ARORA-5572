@@ -1,10 +1,10 @@
-# Jay Arora — Portfolio Website
+# Jay Arora
 
 This is the personal portfolio of **Jay Arora**, a Software Engineer specializing in full-stack development, backend engineering, API design, and modern frontend UI/UX. The portfolio showcases skills, professional experience, featured projects, services offered, and a blog.
 
 ##  Live Demo
 
-
+https://ja-portfolio-lime.vercel.app/
 
 ## Project Structure
 
@@ -48,36 +48,6 @@ src/
 | Icons      | HeroIcons, SVG                   |
 
 
-## ▶ How to Run Locally
-
-### 1. Clone the repository
-
-```
-git clone https://github.com/YOUR-USERNAME/jay-portfolio.git
-cd jay-portfolio
-```
-
-### 2. Install dependencies
-
-```
-npm install
-```
-
-### 3. Start development
-
-```
-ng serve --open
-```
-
-## Build for Production
-
-```
-ng build
-```
-
-Final output will be in `dist/`.
-
-
 ## License
 
 This project is licensed under MIT License.
@@ -87,6 +57,6 @@ This project is licensed under MIT License.
 
 **Jay Arora**
 Software Engineer
-Portfolio:
+contact:-
 Email: 1811.m.jay@gmail.com
 LinkedIn: https://www.linkedin.com/in/jay-arora-34706b265/
